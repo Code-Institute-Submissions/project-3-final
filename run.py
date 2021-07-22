@@ -11,7 +11,7 @@ def crete_random_ship():
 
 
 def play_again():
-    try_again = input("Wanna play again <Y>es or <N>o :").lower()
+    try_again = input("Wanna play again <Y>es or <N>o :\n").lower()
     if try_again == "y":
         play_game()
     else:
@@ -48,14 +48,14 @@ def play_game():
     bullets = 15
     while bullets:
         try:
-            row = int(input("Choose a row between 1 and 5: "))
-            column = int(input("Choose a column between 1 and 5: "))
+            row = int(input("Choose a row between 1 and 5: \n"))
+            column = int(input("Choose a column between 1 and 5: \n"))
         except ValueError:
-            print("Numbers only please: ")
+            print("Numbers only please ")
             continue
 
         if row not in range(1, 6) or column not in range(1, 6):
-            print("That's not between 1 and 5, Try again!: ")
+            print("That's not between 1 and 5, Try again! ")
             continue
 
         row = row - 1
